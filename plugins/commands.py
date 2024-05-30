@@ -1,7 +1,3 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 import os, string, logging, random, asyncio, time, datetime, re, sys, json, base64
 from Script import script
 from pyrogram import Client, filters, enums
@@ -20,18 +16,20 @@ logger = logging.getLogger(__name__)
 BATCH_FILES = {}
 join_db = JoinReqs
 
+REACTIONS = ["🔥", "❤️", "😍", "⚡"]
+
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
-    await message.react(emoji="🔥")
+    await message.react(emoji=random.choice(REACTIONS))
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [[
-            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ],[
-            InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/vj_bot_disscussion"),
-            InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/vj_bots')
-        ],[
-            InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-        ]]
+        buttons = [
+            [
+                InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+            ],
+            [
+                InlineKeyboardButton('⭕️𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
+            ]
+        ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
@@ -46,34 +44,35 @@ async def start(client, message):
     if len(message.command) != 2:
         if PREMIUM_AND_REFERAL_MODE == True:
             buttons = [[
-                InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+hB6czljfX_diZjNl"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_02")
             ],[
-                InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_03"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_04")
             ],[
-                InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS")
             ],[
-                InlineKeyboardButton('🔻 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🔻', callback_data='subscription')
+            InlineKeyboardButton("⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️", url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
             ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-            ]]
+            InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')           
+        ]]
         else:
             buttons = [[
-                InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+hB6czljfX_diZjNl"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_02")
             ],[
-                InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_03"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_04")
             ],[
-                InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS")
             ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-            ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
-        await asyncio.sleep(1)
-        await m.delete()
+            InlineKeyboardButton("⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️", url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
+            ],[
+            InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')           
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -92,18 +91,20 @@ async def start(client, message):
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [[
-            InlineKeyboardButton("❆ Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link)
+            InlineKeyboardButton("📢 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑻𝑶 𝑱𝑶𝑰𝑵 𝑪𝑯𝑨𝑵𝑵𝑬𝑳 📢", url=invite_link.invite_link)
         ]]
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
+                btn.append([InlineKeyboardButton("🔄 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇 🔄", callback_data=f"checksub#{kk}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("🔄 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇 🔄", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         if REQUEST_TO_JOIN_MODE == True:
-            text = "**🕵️ Jᴏɪɴ Tʜᴇ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Gᴇᴛ Mᴏᴠɪᴇ Fɪʟᴇ\n\n👨‍💻 Fɪʀsᴛ Cʟɪᴄᴋ Oɴ Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Bᴜᴛᴛᴏɴ, Tʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ Aғᴛᴇʀ Cʟɪᴄᴋ Oɴ Tʀʏ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ**"
+            photo="https://telegra.ph/file/59a3a0288b4900dc7a494.jpg",
+            caption="**♦️ READ THIS INSTRUCTION ♦️\n\n🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ 📢 Request to join Channel 📢 എന്ന ബട്ടണിലോ താഴെ കാണുന്ന ലിങ്കിലോ ക്ലിക്ക് ചെയ്യാവുന്നതാണ്. Join channel ക്ലിക്ക് ചെയ്ത ശേഷം 🔄 Try Again 🔄 എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Group, You Must Have To Join Our Official Channel First By Clicking 📢 Request to Join Channel 📢 Button or the Link shown Below. After That, Click 🔄 Try Again 🔄 Button. I'll Send You That Movie 🙈\n\n👇 CLICK REQUEST TO JOIN CHANNEL & CLICK TRY AGAIN 👇**",                       
         else:
-            text = "**🕵️ Jᴏɪɴ Tʜᴇ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Gᴇᴛ Mᴏᴠɪᴇ Fɪʟᴇ\n\n👨‍💻 Fɪʀsᴛ  Cʟɪᴄᴋ Oɴ Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Bᴜᴛᴛᴏɴ, Tʜᴇɴ Jᴏɪɴ Cʜᴀɴɴᴇʟ Aғᴛᴇʀ Cʟɪᴄᴋ Oɴ Tʀʏ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ **"
+            photo="https://telegra.ph/file/59a3a0288b4900dc7a494.jpg",
+            caption="**♦️ READ THIS INSTRUCTION ♦️\n\n🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ 📢 Request to join Channel 📢 എന്ന ബട്ടണിലോ താഴെ കാണുന്ന ലിങ്കിലോ ക്ലിക്ക് ചെയ്യാവുന്നതാണ്. Join channel ക്ലിക്ക് ചെയ്ത ശേഷം 🔄 Try Again 🔄 എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Group, You Must Have To Join Our Official Channel First By Clicking 📢 Request to Join Channel 📢 Button or the Link shown Below. After That, Click 🔄 Try Again 🔄 Button. I'll Send You That Movie 🙈\n\n👇 CLICK REQUEST TO JOIN CHANNEL & CLICK TRY AGAIN 👇**",                
         await client.send_message(
             chat_id=message.from_user.id,
             text=text,
@@ -114,30 +115,34 @@ async def start(client, message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         if PREMIUM_AND_REFERAL_MODE == True:
             buttons = [[
-                InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+hB6czljfX_diZjNl"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_02")
             ],[
-                InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_03"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_04")
             ],[
-                InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS")
             ],[
-                InlineKeyboardButton('🔻 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🔻', callback_data='subscription')
+            InlineKeyboardButton("⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️", url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
             ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-            ]]
+            InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')           
+        ]]
         else:
             buttons = [[
-                InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+hB6czljfX_diZjNl"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_02")
             ],[
-                InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_03"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_04")
             ],[
-                InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS")
             ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-            ]]
+            InlineKeyboardButton("⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️", url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
+            ],[
+            InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')           
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -167,41 +172,42 @@ async def start(client, message):
         else:
             if PREMIUM_AND_REFERAL_MODE == True:
                 buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
-                ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                    InlineKeyboardButton('🔻 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🔻', callback_data='subscription')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-                ]]
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+hB6czljfX_diZjNl"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_02")
+            ],[
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_03"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_04")
+            ],[
+            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS")
+            ],[
+            InlineKeyboardButton("⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️", url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
+            ],[
+            InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')           
+        ]]
             else:
                 buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
-                ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-                ]]
-            reply_markup = InlineKeyboardMarkup(buttons)
-            m=await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
-            await asyncio.sleep(1)
-            await m.delete()
-            await message.reply_photo(
-                photo=random.choice(PICS),
-                caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
-            return 
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+hB6czljfX_diZjNl"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟮", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_02")
+            ],[
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟯", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_03"),
+            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟰", url=f"https://t.me/ARAKAL_THERAVAD_GROUP_04")
+            ],[
+            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url="https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS")
+            ],[
+            InlineKeyboardButton("⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️", url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
+            ],[
+            InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')           
+        ]]
+            reply_markup = InlineKeyboardMarkup(buttons)      
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        return
     try:
         pre, file_id = data.split('_', 1)
     except:
@@ -258,20 +264,25 @@ async def start(client, message):
                     )
                 if STREAM_MODE == True:
                     button = [[
-                        InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                        InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                    ],[
-                        InlineKeyboardButton('𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥', url="https://t.me/KingVJ01")
-                    ],[
-                        InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                        InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
                     ]]
                 else:
                     button = [[
-                        InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                        InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                    ],[
-                        InlineKeyboardButton('𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥', url="https://t.me/KingVJ01")
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
                     ]]
                 msg = await client.send_cached_media(
                     chat_id=message.from_user.id,
@@ -453,20 +464,26 @@ async def start(client, message):
                     return
             if STREAM_MODE == True:
                 button = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                ],[
-                    InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/KingVJ01")
-                ],[
-                    InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @KingVJ01
-                ]]
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
+                    ]]
             else:
                 button = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                ],[
-                    InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/KingVJ01")
-                ]]
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
+                    ]]
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
@@ -526,20 +543,26 @@ async def start(client, message):
                     return
             if STREAM_MODE == True:
                 button = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                ],[
-                    InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/KingVJ01")
-                ],[
-                    InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @KingVJ01
-                ]]
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
+                    ]]
             else:
                 button = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                ],[
-                    InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/KingVJ01")
-                ]]
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
+                    ]]
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
@@ -598,20 +621,26 @@ async def start(client, message):
             return
     if STREAM_MODE == True:
         button = [[
-            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-        ],[
-            InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/KingVJ01")
-        ],[
-            InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @KingVJ01
-        ]]
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
+                    ]]
     else:
         button = [[
-            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-        ],[
-            InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/KingVJ01")
-        ]]
+                        InlineKeyboardButton('𝐆 - 1⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_02'),
+                        InlineKeyboardButton('𝐆 - 2⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_03'),
+                        InlineKeyboardButton('𝐆 - 3⃣', url=f'https://t.me/cinemalokamramanan'),
+                        InlineKeyboardButton('𝐆 - 4⃣', url=f'https://t.me/ARAKAL_THERAVAD_GROUP_04')                                          
+                     ],[
+                        InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                     ],[     
+                        InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS"),
+                    ]]
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
