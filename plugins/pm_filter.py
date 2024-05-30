@@ -28,6 +28,14 @@ BUTTONS1 = {}
 BUTTONS2 = {}
 SPELL_CHECK = {}
 
+NON_IMG = """‼️ FILE NOT FOUND ? ‼️
+
+1️⃣ സിനിമയുടെ സ്പെല്ലിങ്ങ് ഗൂഗിളിൽ ഉള്ളത് പോലെ ആണോ നിങ്ങൾ അടിച്ചത് എന്ന് ഉറപ്പ് വരുത്തുക..!!
+
+ 2️⃣ നിങ്ങൾ ചോദിച്ച സിനിമ OTT റിലീസ് ആയതാണോ എന്ന് @OTT_ARAKAL_THERAVAD_MOVIESS യിൽ ചെക്ക് ചെയ്യുക..!!
+
+3️⃣ മൂവിക്ക് വേണ്ടി മെസ്സേജ് അയക്കുമ്പോൾ മൂവിയുടെ പേര് ഇറങ്ങിയ വർഷം മാത്രം അയക്കുക..!!"""
+
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     if message.chat.id != SUPPORT_CHAT_ID:
