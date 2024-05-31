@@ -228,7 +228,7 @@ async def save_group_settings(group_id, key, value):
     await db.update_settings(group_id, current)
     
 def get_size(size):
-    units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB"]
+    units = ["Bytes", "K𝙱", "M𝙱", "G𝙱", "T𝙱", "P𝙱", "E𝙱"]
     size = float(size)
     i = 0
     while size >= 1024.0 and i < len(units):
