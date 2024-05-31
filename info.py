@@ -19,8 +19,8 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/39b86f6dc3e12c8976f2b.jpg https://telegra.ph/file/ba3a4e5685ffce4ee9fa2.jpg https://telegra.ph/file/2cad110c8592f881e347d.jpg https://telegra.ph/file/dac6509fb6689e5d8fb75.jpg https://telegra.ph/file/e748da46b2027988f8b01.jpg https://telegra.ph/file/62341d24b79470358f6bd.jpg https://telegra.ph/file/4780d98d162cbad0b49d8.jpg https://telegra.ph/file/8492c75920649eec4c204.jpg https://telegra.ph/file/8492c75920649eec4c204.jpg https://telegra.ph/file/64bc779495cecfe6c707d.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/d4445551bea70aedecaf1.jpg")
+PICS = (environ.get('PICS', 'https://telegra.ph/file/eb2076910fc1faa2f1c61.jpg https://telegra.ph/file/c3f4699d4678f873e3986.jpg https://telegra.ph/file/aaef98ebba21f74d58b97.jpg https://telegra.ph/file/dcb9a1f6d71e422f880a6.jpg https://telegra.ph/file/bf5365c9a3a109b260552.jpg https://telegra.ph/file/3c51670082a64f6fa74f6.jpg https://telegra.ph/file/511e1b7f439a39b6ce89b.jpg https://telegra.ph/file/48facaa4f70faa38ccdf2.jpg https://telegra.ph/file/b9ccf34a299a8d55d12ff.jpg https://telegra.ph/file/16af79f52b612816eb4f7.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/238a8982aab21db9cdaa4.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/How_To_Open_Linkl")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 
@@ -48,8 +48,8 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 AUTH_CHANNEL = -1002022755818
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://anuragam:anuragam@cluster0.p5xynbv.mongodb.net/")
-DATABASE_NAME = environ.get('DATABASE_NAME', "anuragam")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Manaf:Manaf@cluster0.h8xkden.mongodb.net/")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Manaf")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Premium And Referal Settings
@@ -109,12 +109,7 @@ EPISODES = ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10"
 QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p"]
 YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]
 
-
-                           # Don't Remove Credit @VJ_Botz
-                           # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-                           # Ask Doubt on telegram @KingVJ01
-
-
+                         
 # Online Stream and Download
 STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or False
 
