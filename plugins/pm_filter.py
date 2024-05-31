@@ -232,6 +232,9 @@ async def next_page(bot, query):
                         InlineKeyboardButton("𝑵𝒆𝒙𝒕 ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
                     ],
                 )
+                btn.append(
+                    [InlineKeyboardButton(text="🎬 𝑹𝑬𝑸𝑼𝑬𝑺𝑻 𝑮𝑹𝑶𝑼𝑷 🎬", url=f"https://t.me/+lHi0hcen1vJjNTll")]
+                )
         else:
             if 0 < offset <= int(MAX_B_TN):
                 off_set = 0
