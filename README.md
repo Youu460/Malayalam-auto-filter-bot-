@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://graph.org/file/d57d6f83abb6b8d0efb02.jpg" alt="VJ-Filter-Bot Logo">
+  <img src="https://telegra.ph/file/39b86f6dc3e12c8976f2b.jpg" alt="VJ-Filter-Bot Logo">
 </p>
 <h1 align="center">
-  VJ FILTER BOT
+ AC FILTER BOT
 </h1>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+VJ+Filter+Bot!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+AC+Filter+Bot!)
 </p>
 
 ## Main Feature 
