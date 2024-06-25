@@ -6,9 +6,9 @@ class script(object):
 
 <b>I'ᴍ <a href=https://t.me/{}>{}</a> Yᴏᴜ Cᴀɴ Cᴀʟʟ Mᴇ Aꜱ Aᴜᴛᴏ Fɪʟᴛᴇʀ Bᴏᴛ ᴠ3 🫶</b>
 
-<b>Exᴄʟᴜꜱɪᴠᴇʟʏ Mᴀᴅᴇ Tʜɪꜱ Bᴏᴛ Fᴏʀ @ARAKAL_THERAVAD_GROUP_01..!! 💫</b>
+<b>Exᴄʟᴜꜱɪᴠᴇʟʏ Mᴀᴅᴇ Tʜɪꜱ Bᴏᴛ Fᴏʀ @cinemalokamramanan..!! 💫</b>
 
-<b>📌 Sᴜᴘᴘᴏʀᴛ : @OTT_ARAKAL_THERAVAD_MOVIESS</b>
+<b>📌 Sᴜᴘᴘᴏʀᴛ : <a href='https://t.me/+rrK46TeoN-5lNjZl'>𝑶𝑻𝑻 𝑼𝑷𝑫𝑨𝑻𝑬𝑺</a></b>
 
 <b>🍂 Oᴡɴᴇʀ : @ARAKAL_THERAVAD_MOVIES_02_bot</b>"""
     
