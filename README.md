@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://telegra.ph/file/2387123b0e6afba6047f6.jpg" alt="AC-Filter-Bot Logo">
+  <img src="https://telegra.ph/file/a15224e1b9a45dc2b5fdf.jpg" alt="AC-Filter-Bot Logo">
 </p>
 <h1 align="center">
  AC FILTER BOT
