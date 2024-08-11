@@ -165,12 +165,10 @@ Nᴀᴍᴇ - {}"""
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
-    CAPTION ="""<b>📂 Fɪʟᴇ ɴᴀᴍᴇ : <code>{file_name}</code></b>
+    CAPTION ="""<b>𝐻𝑒𝑙𝑙𝑜 👋 {}</b>😍
 
-<b>
-╭────── • ◆ • ──────╮
-⚙️ Fɪʟᴇ Sɪᴢᴇ :  {file_size}
-╰────── • ◆ • ──────╯</b>
+<b>📂 Fɪʟᴇ ɴᴀᴍᴇ : <code>{file_name}</code></b>
+
 <b> ⚡Thanks For Using RAMANAN🤖♥️</b>
 
 <b> Note : <tt>Files Are Not Owned By Us⚠️</tt></b>
