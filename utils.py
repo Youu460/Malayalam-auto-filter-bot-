@@ -635,9 +635,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                     size = get_size(file.file_size)
                     if CUSTOM_FILE_CAPTION:
                         try:
-                            f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
-                                                                    file_size='' if size is None else size,
-                                                                    file_caption='' if f_caption is None else f_caption)
+                            f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption, mention=query.from_user.mention)
                         except Exception as e:
                             print(e)
                             f_caption = f_caption
