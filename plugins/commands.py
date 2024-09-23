@@ -21,7 +21,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],
+            [
+                InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+HLol2sSGBDAzYTRl")
             ],
             [
                 InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl"),
@@ -41,25 +44,35 @@ async def start(client, message):
     if len(message.command) != 2:
         if PREMIUM_AND_REFERAL_MODE == True:
             buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/cinemalokamramanan"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
         ]]
         else:
             buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/cinemalokamramanan"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -99,25 +112,35 @@ async def start(client, message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         if PREMIUM_AND_REFERAL_MODE == True:
             buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/cinemalokamramanan"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
         ]]
         else:
             buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/cinemalokamramanan"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -148,25 +171,35 @@ async def start(client, message):
         else:
             if PREMIUM_AND_REFERAL_MODE == True:
                 buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/cinemalokamramanan"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
         ]]
             else:
                 buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/cinemalokamramanan"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
             InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
         ]]
             reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -232,13 +265,13 @@ async def start(client, message):
                     )
                 if STREAM_MODE == True:
                     button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                     ]]
                 else:
                     button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                      ]]
@@ -403,13 +436,13 @@ async def start(client, message):
                     return
             if STREAM_MODE == True:
                 button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                     ]]
             else:
                 button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                     ]]
@@ -466,13 +499,13 @@ async def start(client, message):
                     return
             if STREAM_MODE == True:
                 button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                     ]]
             else:
                 button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                     ]]
@@ -527,13 +560,13 @@ async def start(client, message):
             return
     if STREAM_MODE == True:
         button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                     ]]
     else:
         button = [[
-                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/cinemalokamramanan')
+                        InlineKeyboardButton('👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭', url=f'https://t.me/+HLol2sSGBDAzYTRl')
                      ],[     
                         InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url="http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
                     ]]
