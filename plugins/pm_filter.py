@@ -1967,41 +1967,46 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "mfna":
         await query.answer("𝑴𝒂𝒏𝒖𝒂𝒍 𝑭𝒊𝒍𝒕𝒆𝒓 𝒊𝒔 𝑪𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝑫𝒊𝒔𝒂𝒃𝒍𝒆𝒅..!!", show_alert=True)
-
-    elif query.data == "winfo":
-        await query.answer("𝑪𝑶𝑶𝑴𝑰𝑵𝑮 𝑺𝑶𝑶𝑶𝑶𝑶𝑶𝑶𝑶𝑵...!!", show_alert=True)
-
+    
     elif query.data == "qinfo":
-        await query.answer("𝑮𝒍𝒐𝒃𝒂𝒍 𝑭𝒊𝒍𝒕𝒆𝒓𝒔 𝒊𝒔 𝑪𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝑫𝒊𝒔𝒂𝒃𝒍𝒆𝒅..!!", show_alert=True)
+        await query.answer("𝑮𝒍𝒐𝒃𝒂𝒍 𝑭𝒊𝒍𝒕𝒆𝒓𝒔 𝒊𝒔 𝑪𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝑫𝒊𝒔𝒂𝒃𝒍𝒆𝒅..!!", show_alert=True)  
 
-    elif query.data == "sped":
-        await query.answer("𝟏𝟖𝟎 𝑴𝑩𝒔", show_alert=True)
+    elif query.data == "mstd":
+        await query.answer(script.MUST_TXT, show_alert=True)
 
-    elif query.data == "ctex":
-        await query.answer("© 𝑪𝑰𝑵𝑬𝑴𝑨 𝑳𝑶𝑲𝑨𝑴 𝑶𝑵𝑳𝒀...", show_alert=True)
+    elif query.data == "formt":
+        await query.answer(script.FORM_TXT, show_alert=True)
 
     elif query.data == "start":
         if PREMIUM_AND_REFERAL_MODE == True:
             buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+HLol2sSGBDAzYTRl"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
+            
         ]]
         else:
             buttons = [[
-            InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+HLol2sSGBDAzYTRl"),
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton("🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥", url=f"http://t.me/joinchat/Wl2qJsJpNhg0OWVl")
+            InlineKeyboardButton('👥 ᴄᴏᴍᴍᴜɴɪᴛʏ 👥', callback_data='commun'),
+            InlineKeyboardButton('🤖 ʙᴏᴛ ɪɴғᴏ 🤖', callback_data='about')
             ],[
-            InlineKeyboardButton('🎁 𝑺𝒑𝒆𝒄𝒊𝒂𝒍𝒊𝒕𝒚 🎁', callback_data='help'),
-            InlineKeyboardButton('🛡 𝑬𝒙𝒕𝒓𝒂 🛡', callback_data='extra')
+            InlineKeyboardButton('🎁 ʜᴇʟᴘ 🎁', callback_data='help'),            
+            InlineKeyboardButton('🪬 ᴀʙᴏᴜᴛ 🪬', callback_data='botinfo')
             ],[
-            InlineKeyboardButton('🪬 𝑨𝒃𝒐𝒖𝒕 🪬', callback_data='about')
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+-Pnub5-7v0pjZjZl")
+            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2022,26 +2027,68 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )    
+        )   
+
+    elif query.data == "movedow":
+        buttons = [[
+            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+HLol2sSGBDAzYTRl"),
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MOVDOW_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "movereqs":
+        buttons = [[
+            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+HLol2sSGBDAzYTRl"),
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MOVREQ_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "movereq":
+        buttons = [[
+            InlineKeyboardButton("👥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩", url=f"https://t.me/+HLol2sSGBDAzYTRl"),
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='commun')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MOVREQ_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('🕹 𝑴𝒂𝒏𝒖𝒂𝒍 𝑭𝒊𝒍𝒕𝒆𝒓', 'mfna'),
             InlineKeyboardButton('🌏 𝑮𝒍𝒐𝒃𝒂𝒍 𝑭𝒊𝒍𝒕𝒆𝒓𝒔', 'qinfo'),
-            InlineKeyboardButton('𝑨𝒖𝒕𝒐 𝒇𝒊𝒍𝒕𝒆𝒓 📥', callback_data='autofilter')
-        ], [
-            InlineKeyboardButton('📡 𝑪𝒐𝒏𝒏𝒆𝒄𝒕𝒊𝒐𝒏', 'ctex'),
-            InlineKeyboardButton('📌 𝑷𝒊𝒏', 'winfo'),
-            InlineKeyboardButton('𝑷𝒖𝒓𝒈𝒆 🗑️', 'winfo')
-        ], [
-            InlineKeyboardButton('🛜 𝑺𝒑𝒆𝒆𝒅', 'sped'),
-            InlineKeyboardButton('🤐 𝑴𝒖𝒕𝒆', 'winfo'),
-            InlineKeyboardButton('𝑲𝒊𝒄𝒌❌', 'winfo')
-        ], [
-            InlineKeyboardButton('⚒ 𝑹𝒆𝒑𝒐𝒓𝒕', 'winfo'),            
-            InlineKeyboardButton('𝑬𝒙𝒕𝒓𝒂 📟', 'winfo')
-        ], [            
-            InlineKeyboardButton('📈 𝑺𝒕𝒂𝒕𝒖𝒔', callback_data='stats')
-        ], [
+            InlineKeyboardButton('𝑨𝒖𝒕𝒐 𝒇𝒊𝒍𝒕𝒆𝒓 📥', callback_data='autofilter')                   
+            ],[
+            InlineKeyboardButton('🤷‍♂️ 𝐇𝐎𝐖 𝐓𝐎 𝐑𝐄𝐐𝐔𝐄𝐒𝐓 🤷🏻', callback_data='movereqs')
+            ],[
+            InlineKeyboardButton('🤷‍♂️ 𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 🤷🏻', callback_data='movedow')           
+            ],[
             InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='start'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2055,9 +2102,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "extra":
-        buttons = [[
-            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')
+    elif query.data == "botinfo":
+        buttons = [[                             
+            InlineKeyboardButton('📈 𝑺𝒕𝒂𝒕𝒖𝒔', callback_data='stats'),
+            InlineKeyboardButton('☠ 𝑺𝒐𝒖𝒓𝒄𝒆', callback_data='sorce')
+            ],[
+            InlineKeyboardButton('🪬 𝑯𝒐𝒎𝒆 🪬', callback_data='start'),
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')                       
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -2066,7 +2117,38 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.EXTRA_TXT,
+            text=script.BOTINFO_TXT.format(temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "about":
+        buttons = [[            
+            InlineKeyboardButton('🪬 𝑯𝒐𝒎𝒆 🪬', callback_data='start'),
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='help')                                    
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ABOUT_TXT.format(temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )        
+    elif query.data == "sorce":
+        buttons = [[
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data='botinfo')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.SORCE_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -2084,7 +2166,101 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.AUTOFILTER_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )                                          
+        )    
+    elif query.data.startswith("rules"):
+        _, search = query.data.split("#")
+        buttons = [[
+            InlineKeyboardButton("𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲 𝗡𝗮𝗺𝗲", url=f"https://google.com/search?q={search}")
+            ],[
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]        
+        await query.message.edit_text(
+            text=script.RULES_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )   
+    elif query.data.startswith("eng"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]     
+        await query.message.edit_text(
+            text=script.ENG_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data.startswith("mal"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]     
+        await query.message.edit_text(
+            text=script.MALA_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data.startswith("hin"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]     
+        await query.message.edit_text(
+            text=script.HIND_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+     elif query.data.startswith("tam"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]            
+        await query.message.edit_text(
+            text=script.TAM_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data.startswith("tel"):
+        _, search = query.data.split("#")
+        buttons = [[ 
+            InlineKeyboardButton(
+            text="𝐒𝐞𝐚𝐫𝐜𝐡 𝐨𝐧 𝐆𝐨𝐨𝐠𝐥𝐞", url=f"https://google.com/search?q={search}"),            
+            InlineKeyboardButton('⬅️ 𝑩𝒂𝒄𝒌', callback_data=f'langback#{search}')
+        ]]        
+        await query.message.edit_text(
+            text=script.TELG_TXT.format(query.from_user.mention),
+            reply_markup = InlineKeyboardMarkup(buttons),
+            parse_mode=enums.ParseMode.HTML
+        ) 
+    elif query.data.startswith("langback"):
+        _, search = query.data.split("#")  
+        spl = f"<b>❝ 𝖧𝖾𝗒 : {query.from_user.mention} 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖨𝗌 𝖶𝗋𝗈𝗇𝗀 ❞ \n\n➪ 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖮𝖿 𝖬𝗈𝗏𝗂𝖾 <u>𝖢𝗁𝖾𝖼𝗄 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 (𝗀𝗈𝗈𝗀𝗅𝖾)</u> 𝖡𝗎𝗍𝗍𝗈𝗇 𝖡𝖾𝗅𝗈𝗐 𝖶𝗂𝗅𝗅 𝖧𝖾𝗅𝗉 𝖸𝗈𝗎..𓁉\n\n➪ 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝖺𝗎𝗀𝖾 𝖥𝗋𝗈𝗆 𝖳𝗁𝖾 𝖫𝗂𝗌𝗍 𝖡𝖾𝗅𝗈𝗐 𝖳𝗈 𝖬𝗈𝗋𝖾 𝖧𝖾𝗅𝗉..☃︎</b>"                    
+        btn = [[
+           InlineKeyboardButton('𝗠𝘂𝘀𝘁 𝗥𝗲𝗮𝗱', 'mstd'),
+           InlineKeyboardButton('Rules', callback_data=f'rules#{search}'),
+           InlineKeyboardButton('Format', 'formt')
+          ],[
+           InlineKeyboardButton('ᴇɴɢ', callback_data=f'eng#{search}'),
+           InlineKeyboardButton('ᴍᴀʟ', callback_data=f'mal#{search}'),
+           InlineKeyboardButton('ʜɪɴ', callback_data=f'hin#{search}'),
+           InlineKeyboardButton('ᴛᴀᴍ', callback_data=f'tam#{search}'),
+           InlineKeyboardButton('ᴛᴇʟ', callback_data=f'tel#{search}')
+         ],[
+           InlineKeyboardButton(
+            text="📢 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 (𝗚𝗼𝗼𝗴𝗹𝗲) 📢",
+            url=f"https://google.com/search?q={search}"
+        )
+            
+    ]]
+        await query.message.edit_text(spl, reply_markup=InlineKeyboardMarkup(btn))
+        
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
@@ -2095,7 +2271,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
-        reply_markup = InlineKeyboardMarkup(buttons)
+          reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
         chats = await db.total_chat_count()
@@ -2714,9 +2890,9 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>📁 Here is What I Found In My Database For Your Query : {search}👇🏻</b>"
+            cap = f"<b>𝖧𝖾𝗒 : {msg.from_user.mention}\n𝖥𝗂𝗅𝗆 : {search}\n𝖱𝖾𝗌𝗎𝗅𝗍𝗌 : {total_results}\n\n[Usᴇ Bᴇʟᴏᴡ Nᴇxᴛ Bᴜᴛᴛᴏɴ]</b>"
         else:
-            cap = f"<b>📁 Here is What I Found In My Database For Your Query : {search}👇🏻</b>"
+            cap = f"<b>𝖧𝖾𝗒 : {msg.from_user.mention}\n𝖥𝗂𝗅𝗆 : {search}\n𝖱𝖾𝗌𝗎𝗅𝗍𝗌 : {total_results}\n\n[Usᴇ Bᴇʟᴏᴡ Nᴇxᴛ Bᴜᴛᴛᴏɴ]</b>"
             cap+="<b><u>🍿 Your Movie Files 👇</u></b>\n\n"
             for file in files:
                 cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
@@ -2781,24 +2957,33 @@ async def auto_filter(client, msg, spoll=False):
 
 
 async def advantage_spell_chok(msg):
+    spl = f"<b>❝ 𝖧𝖾𝗒 : {msg.from_user.mention} 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖨𝗌 𝖶𝗋𝗈𝗇𝗀 ❞ \n\n➪ 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖮𝖿 𝖬𝗈𝗏𝗂𝖾 <u>𝖢𝗁𝖾𝖼𝗄 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 (𝗀𝗈𝗈𝗀𝗅𝖾)</u> 𝖡𝗎𝗍𝗍𝗈𝗇 𝖡𝖾𝗅𝗈𝗐 𝖶𝗂𝗅𝗅 𝖧𝖾𝗅𝗉 𝖸𝗈𝗎..𓁉\n\n➪ 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝖺𝗎𝗀𝖾 𝖥𝗋𝗈𝗆 𝖳𝗁𝖾 𝖫𝗂𝗌𝗍 𝖡𝖾𝗅𝗈𝗐 𝖳𝗈 𝖬𝗈𝗋𝖾 𝖧𝖾𝗅𝗉..☃︎</b>"        
+    message = msg
     mv_rqst = msg.text
-    search = msg.text.replace(" ", "+")
+    search = msg.text.replace(" ", "+")      
     btn = [[
+        InlineKeyboardButton('𝗠𝘂𝘀𝘁 𝗥𝗲𝗮𝗱', 'mstd'),
+        InlineKeyboardButton('Rules', callback_data=f'rules#{search}'),
+        InlineKeyboardButton('Format', 'formt')
+        ],[
+        InlineKeyboardButton('ᴇɴɢ', callback_data=f'eng#{search}'),
+        InlineKeyboardButton('ᴍᴀʟ', callback_data=f'mal#{search}'),
+        InlineKeyboardButton('ʜɪɴ', callback_data=f'hin#{search}'),
+        InlineKeyboardButton('ᴛᴀᴍ', callback_data=f'tam#{search}'),
+        InlineKeyboardButton('ᴛᴇʟ', callback_data=f'tel#{search}')
+        ],[
         InlineKeyboardButton(
-            text="ɢᴏᴏɢʟᴇ",
+            text="📢 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 (𝗚𝗼𝗼𝗴𝗹𝗲) 📢",
             url=f"https://google.com/search?q={search}"
         )
             
     ]]
-    spl = await msg.reply_photo(
-            photo="https://telegra.ph/file/0a777cb06df4f0336861b.jpg", 
-            caption=NON_IMG.format(mv_rqst),
-            reply_markup=InlineKeyboardMarkup(btn)
-    )
-    await asyncio.sleep()
-    await spl.delete()
-    await msg.delete()
-    return
+    await msg.reply_photo(
+            photo="https://envs.sh/018.jpg", 
+            caption=spl.format(mv_rqst),
+            reply_markup=InlineKeyboardMarkup(btn))            
+    #await msg.delete()
+    return   
             
 async def manual_filters(client, message, text=False):
     settings = await get_settings(message.chat.id)
