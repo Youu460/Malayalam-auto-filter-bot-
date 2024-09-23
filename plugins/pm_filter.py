@@ -2215,7 +2215,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(buttons),
             parse_mode=enums.ParseMode.HTML
         )
-     elif query.data.startswith("tam"):
+    elif query.data.startswith("tam"):
         _, search = query.data.split("#")
         buttons = [[ 
             InlineKeyboardButton(
