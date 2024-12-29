@@ -297,7 +297,7 @@ Nᴀᴍᴇ - {}"""
 
 <b> Note : <tt>Files Are Not Owned By Us⚠️</tt></b>
 
-<b> [🤖ʀᴀᴍᴀɴᴀɴ ʙᴏᴛ🤖](http://t.me/Clonefiltermc_bot)</b>"""
+<b> [🤖Clonefiltermc_bot🤖](http://t.me/Clonefiltermc_bot)</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {qurey}
